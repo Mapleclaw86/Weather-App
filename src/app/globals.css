@@ -8,6 +8,7 @@ h1 {
   font-size:40px;
   font-weight:bolder;
   padding:10px;
+  padding-top:15px;
 }
 
 .dateTime {
@@ -16,14 +17,13 @@ h1 {
   justify-content:center;
   p {
     color:#ffffff;
-    border-style:solid;
     border-radius:8px;
     border-bottom:#ffffff;
     text-align:center;
-    padding:12px;
+    padding-top:12px;
     border-style:solid;
     border-bottom-color:#ffffff;
-    width:215px;
+    width:200px;
   }
 }
 
