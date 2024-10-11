@@ -2,26 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+h1 {
+  color:#ffffff;
+  text-align:center;
+  font-size:40px;
+  font-weight:bolder;
+  padding:10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.dateTime {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  p {
+    color:#ffffff;
+    border-style:solid;
+    border-radius:8px;
+    border-bottom:#ffffff;
+    text-align:center;
+    padding:12px;
+    border-style:solid;
+    border-bottom-color:#ffffff;
+    width:215px;
   }
+}
+
+.weatherInfo {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  p, button {
+    color:#bfdfff;
+    text-align:center;
+    font-weight:200;
+    padding:6px;
+    border-style:solid;
+    border-width:8px;
+    border-radius:8px;
+    border-color:#393939;
+    background-color:#393939;
+    margin:10px;
+  }
+.button {
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.button:hover {
+  background-color:#474747;
+  border-color:#474747;
+}
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  background-color:#404040;
+  font-family:Arial, Helvetica, sans-serif;
 }
