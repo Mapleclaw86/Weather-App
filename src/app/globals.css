@@ -21,9 +21,10 @@ h1 {
     border-bottom:#ffffff;
     text-align:center;
     padding-top:12px;
+    padding-left:12px;
+    padding-right:12px;
     border-style:solid;
     border-bottom-color:#ffffff;
-    width:200px;
   }
 }
 
