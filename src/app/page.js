@@ -6,29 +6,19 @@ export default function Home() {
       </header>
       <div className="weatherInfo">
         <button class="button">
-          Temperature: 
-          <br></br>
-          64°F
+          Temperature: <br></br>64°F
         </button>
         <button class="button">
-          Conditions: 
-          <br></br>
-          Mostly Cloudy
+          Conditions: <br></br>Mostly Cloudy
         </button>
         <button class="button">
-          Wind Speed: 
-          <br></br>
-          7mph
+          Wind Speed: <br></br>7mph
         </button>
         <button class="button">
-          Precipitation: 
-          <br></br>
-          5%
+          Precipitation: <br></br>5%
         </button>
         <button class="button">
-          Humidity: 
-          <br></br>
-          57%
+          Humidity: <br></br>57%
         </button>
       </div>
       <div class="dateTime">
