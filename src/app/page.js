@@ -5,7 +5,7 @@ export default function Home() {
 
   const [latitude, setLatitude] = useState("");
   const [longitude, setLongitude] = useState("");
-  const weatherAPI = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph`;
+  const weatherAPI = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,precipitation_probability,is_day,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph`;
   const [temperature, setTemp] = useState("");
   const [humidity, setHumidity] = useState("");
   const [apparentTemp, setApparentTemp] = useState("");
@@ -22,7 +22,7 @@ export default function Home() {
       setHumidity(data.current.relative_humidity_2m);
       setApparentTemp(data.current.apparent_temperature);
       setWindSpeed(data.current.wind_speed_10m);
-      setRainChance(data.current.rainChance_10m)
+      setRainChance(data.current.precipitation_probability)
     } catch (error) {
       console.error(error);
     }
@@ -46,23 +46,23 @@ export default function Home() {
         <h1>Weather Forecast</h1>
       </header>
       <div className="weatherInfo">
-        <button class="button">
+        <div className="button">
           Temperature: <br></br>{temperature}°F
-        </button>
-        <button class="button">
+        </div>
+        <div className="button">
           Feels Like: <br></br>{apparentTemp}°F
-        </button>
-        <button class="button">
+        </div>
+        <div className="button">
           Wind Speed: <br></br>{windSpeed}mph
-        </button>
-        <button class="button">
+        </div>
+        <div className="button">
           Precipitation: <br></br>{rainChance}%
-        </button>
-        <button class="button">
+        </div>
+        <div className="button">
           Humidity: <br></br>{humidity}%
-        </button>
+        </div>
       </div>
-      <div class="dateTime">
+      <div className="dateTime">
         <p>Date and Time</p>
       </div>
     </div>
