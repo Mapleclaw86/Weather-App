@@ -29,16 +29,9 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setLatitude("37.7749");
-    setLongitude("-122.4194");
+    setLatitude(null);
+    setLongitude(null);
   }, []);
-
-  useEffect(() => {
-    if (latitude && longitude) {
-      getWeather();
-    }
-  }, [latitude, longitude]);
-
 
   return (
     <div>
@@ -63,8 +56,14 @@ export default function Home() {
         </div>
       </div>
       <div className="dateTime">
-        <p>Date and Time</p>
+        <p>Enter Location Below</p>
       </div>
+      <br></br>
+      <label for="latitude">Latitude: </label>
+      <input type="text" id="input" value={latitude} onChange={(e) => setLatitude(e.target.value)} name="latitude"/>
+      <label for="longitude">__Longitude: </label>
+      <input type="text" id="input" value={longitude} onChange={(e) => setLongitude(e.target.value)}name="longitude"/>
+      <button onClick={getWeather}>__Submit</button>
     </div>
   );
 }
